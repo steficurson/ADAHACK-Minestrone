@@ -2730,3 +2730,7 @@ ActionView::Template::Error (SQLite3::SQLException: no such table: courses):
     6:         <% end %>
     7:     </ul>
   
+Started GET "/courses?query=ccccc&commit=Search" for ::1 at 2024-02-03 15:17:14 +0000
+  
+ActionController::RoutingError (No route matches [GET] "/courses"):
+  
