@@ -1155,26 +1155,3 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 2872)
 
 
-Started GET "/" for 127.0.0.1 at 2024-02-03 14:48:07 +0000
-  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Processing by HomeController#index as HTML
-  Rendering layout layouts/application.html.erb
-  Rendering home/index.html.erb within layouts/application
-  Rendered home/_navbar.html.erb (Duration: 1.6ms | Allocations: 2391)
-  Rendered home/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2801)
-  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2918)
-Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 10519)
-
-
-  
-ActionView::Template::Error (undefined method `email' for nil):
-    3:         <%= button_to 'Login', login_path, method: :get, class:'button' %>
-    4:         <%= button_to 'Sign up', new_user_path, method: :get, class:'button' %>
-    5:     <% else %>
-    6:         Welcome, <%= @user.email %>
-    7:         <%= button_to 'Logout', logout_path, method: :delete, class:'button' %>
-    8:     <% end %>
-    9: </nav>
-  
-app/views/home/_navbar.html.erb:6
-app/views/home/index.html.erb:7
