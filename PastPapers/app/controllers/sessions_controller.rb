@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:password])
       #Success: log the user in
       session[:user_id] = @user.id
-      redirect_to user_path
+      redirect_to user_path(@user)
     else
       message = "Invalid email and/or password. Please try again."
       redirect_to login_path, notice: message

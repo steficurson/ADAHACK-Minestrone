@@ -12,8 +12,6 @@ Rails.application.routes.draw do
   post "/logout", to: "sessions#destroy"
   get "/logout", to: "sessions#destroy"
 
-
-
   get "/home", to: "home#index"
   get "up" => "rails/health#show", as: :rails_health_check
 
