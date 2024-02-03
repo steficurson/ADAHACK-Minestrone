@@ -4,6 +4,7 @@ class CoursesController < ApplicationController
   end
 
   def show
+    @courses = Course.all
     @course = Course.find(params[:id])
     render :show
   end

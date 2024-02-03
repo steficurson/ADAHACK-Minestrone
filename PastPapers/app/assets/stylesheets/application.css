@@ -8,18 +8,6 @@ body {
     font-size: 30px;
     text-align: center;
 }
-.button {
-    background-color: #0c2979;
-    border: none;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
 .navbar {
     background-color: #c2d4f9;
     height: 50px;
@@ -32,3 +20,44 @@ body {
     display: flex;
     float: right;
 }
+.navbar input[type=text] {
+    float: left;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    margin-left: 10px;
+    font-size: 17px;
+    border-radius: 5px;
+  }
+
+.button {
+    background-color: #092538;
+    color: #fff;
+    border: none;
+    margin: 4px 2px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+  }
+.button:hover {
+    background-color: #2980b9;
+  }
+
+
+.course {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #c2d4f9;
+    border: solid 3px black;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+.course:hover {
+    background-color: #f4f4f4;
+}
+

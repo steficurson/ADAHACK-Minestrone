@@ -1,8 +1,16 @@
-<div class="paper-list">
-    <h2>Past Papers List</h2>
-    <ul>
-        <% @courses.each do |course| %>
-            <p><%= course.name %></p>
-        <% end %>
-    </ul>
-</div>
+<head>
+    <title>Courses</title>
+</head>
+    <body>
+        <h1 class="title">University of Edinburgh Past Paper Share</h1>
+        <%= render partial: "home/navbar"%>
+
+    <div class="paper-list">
+        <h2>Courses</h2>
+            <% @courses.each do |course| %>
+                <div class="course">
+                    <p><%= course.name %></p>
+                </div>
+            <% end %>
+    </div>
+</body>

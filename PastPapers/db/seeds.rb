@@ -7,3 +7,8 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+Course.create(name: "Computer Communications and Networks")
+Course.create(name: "Elements of Programming Languages")
+Course.create(name: "Introduction to Mobile Robotics")
+Course.create(name: "Foundations of Natural Language Processing")
+Course.create(name: "Machine Learning")

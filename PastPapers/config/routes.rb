@@ -11,8 +11,8 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   post "/logout", to: "sessions#destroy"
   get "/logout", to: "sessions#destroy"
-  get '/search', to: 'course#search'
-  get '/course', to: 'course#index'
+  get '/search', to: 'courses#search'
+  get '/course', to: 'courses#index'
 
   get "/home", to: "home#index"
   get "up" => "rails/health#show", as: :rails_health_check
