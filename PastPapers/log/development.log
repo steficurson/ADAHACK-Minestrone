@@ -1038,3 +1038,120 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 35ms (Views: 32.7ms | ActiveRecord: 0.0ms | Allocations: 4339)
 
 
+Started GET "/" for ::1 at 2024-02-03 13:08:40 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 277)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 1848)
+Completed 200 OK in 14ms (Views: 10.8ms | ActiveRecord: 0.0ms | Allocations: 2916)
+
+
+Started GET "/" for ::1 at 2024-02-03 13:08:44 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 1206)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 1475)
+
+
+Started GET "/login" for ::1 at 2024-02-03 13:08:46 +0000
+Processing by SessionsController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 1.6ms | Allocations: 831)
+  Rendered layout layouts/application.html.erb (Duration: 5.1ms | Allocations: 1859)
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms | Allocations: 2315)
+
+
+Started GET "/users/new" for ::1 at 2024-02-03 13:08:47 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1975)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 3037)
+Completed 200 OK in 28ms (Views: 15.9ms | ActiveRecord: 2.9ms | Allocations: 7532)
+
+
+Started GET "/" for ::1 at 2024-02-03 13:10:27 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 278)
+  Rendered layout layouts/application.html.erb (Duration: 28.6ms | Allocations: 3288)
+Completed 200 OK in 38ms (Views: 34.0ms | ActiveRecord: 0.0ms | Allocations: 4356)
+
+
+Started GET "/" for ::1 at 2024-02-03 13:10:40 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 2576)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 2845)
+
+
+Started GET "/" for ::1 at 2024-02-03 13:12:25 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 312)
+  Rendered layout layouts/application.html.erb (Duration: 26.2ms | Allocations: 3338)
+Completed 200 OK in 36ms (Views: 32.1ms | ActiveRecord: 0.0ms | Allocations: 4406)
+
+
+Started GET "/" for ::1 at 2024-02-03 13:12:55 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 25.3ms | Allocations: 2650)
+Completed 200 OK in 27ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 2919)
+
+
+Started GET "/" for ::1 at 2024-02-03 13:13:11 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 2644)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 2897)
+
+
+Started GET "/" for ::1 at 2024-02-03 13:13:45 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 24.9ms | Allocations: 2572)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 2825)
+
+
+Started GET "/" for ::1 at 2024-02-03 13:14:00 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 26.1ms | Allocations: 2588)
+Completed 200 OK in 28ms (Views: 27.0ms | ActiveRecord: 0.0ms | Allocations: 2841)
+
+
+Started GET "/" for ::1 at 2024-02-03 13:14:11 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 2583)
+Completed 200 OK in 22ms (Views: 21.2ms | ActiveRecord: 0.0ms | Allocations: 2836)
+
+
+Started GET "/" for ::1 at 2024-02-03 13:14:36 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 80)
+  Rendered layout layouts/application.html.erb (Duration: 25.8ms | Allocations: 2619)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.0ms | Allocations: 2872)
+
+

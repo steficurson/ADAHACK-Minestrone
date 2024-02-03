@@ -1,12 +1,17 @@
-<h1>Edinburgh </h1>
-<%= link_to 'Login', login_path %>
-<%= link_to 'Sign up', new_user_path %>
+<head>
+    <title>UoE Past Paper Share</title>
+</head>
 
-<embed
-    src="https://exampapers.ed.ac.uk/bitstream/handle/20.500.12593/119088/2023600_INFR10067.pdf?sequence=1&isAllowed=y"
-    type="application/pdf"
-    frameBorder="0"
-    scrolling="auto"
-    height="100%"
-    width="100%"
-></embed>
+<body>
+    <h1>University of Edinburgh Past Paper Share</h1>
+    <%= render partial: "navbar"%>
+
+    <embed
+        src="https://exampapers.ed.ac.uk/bitstream/handle/20.500.12593/119088/2023600_INFR10067.pdf?sequence=1&isAllowed=y"
+        type="application/pdf"
+        frameBorder="0"
+        scrolling="auto"
+        height="100%"
+        width="100%"
+    ></embed>
+</body>
