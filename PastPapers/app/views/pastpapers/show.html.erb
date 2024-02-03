@@ -9,13 +9,12 @@
     <div class="answers-container">
         <h3>User Answers</h3>
         <ul id="answers-list">
-            <!---->
             <% @user_answers.each do |answer| %>
                 <li>
                     <%= answer[:text] %>
                     <div class="vote-buttons">
-                        <button onclick="upvoteAnswer(<%= answer[:id] %>)">Upvote</button>
-                        <button onclick="downvoteAnswer(<%= answer[:id] %>)">Downvote</button>
+                        <button class="upvote-button" data-answer-id="<%= answer[:id] %>">Upvote</button>
+                        <button class="downvote-button" data-answer-id="<%= answer[:id] %>">Downvote</button>
                     </div>
                 </li>
             <% end %>
@@ -24,7 +23,7 @@
         <div id="submit-answer">
             <h3>Submit Your Solution</h3>
             <textarea id="user-answer"></textarea>
-            <button onclick="submitAnswer()">Submit</button>
+            <button id="submit-button">Submit</button>
         </div>
     </div>
 </div>
@@ -40,26 +39,38 @@
     }
 
     function upvoteAnswer(answerId) {
-        // Simulate upvote (client-side); in a real application, this should be handled on the server
         const votesElement = document.getElementById(`votes_${answerId}`);
         const currentVotes = parseInt(votesElement.innerText.split(' ')[0]);
         votesElement.innerText = `${currentVotes + 1} Upvotes`;
+    }
 
-        // sendUpvoteToServer(answerId); // Commented out until the function is defined
+    function downvoteAnswer(answerId) {
+        const votesElement = document.getElementById(`votes_${answerId}`);
+        const currentVotes = parseInt(votesElement.innerText.split(' ')[0]);
+        votesElement.innerText = `${currentVotes - 1} Upvotes`;
     }
 
     function submitAnswer() {
-        // Implement answer submission functionality (you can use AJAX to communicate with the server)
         const userAnswer = document.getElementById('user-answer').value;
-
-        // Simulate adding a new answer to the list (client-side); in a real application, this should be handled on the server
-        const newAnswerId = Math.floor(Math.random() * 1000); // Replace with a proper ID generation
-        const newAnswerHtml = `<li id="answer_${newAnswerId}">${escapeHtml(userAnswer)}
-                                <div class="vote-buttons">
-                                    <button onclick="upvoteAnswer(${newAnswerId})">Upvote</button>
+        const newAnswerId = Math.floor(Math.random() * 1000);
+        const newAnswerHtml = `<div class="vote-buttons">
+                                    <button class="upvote-button" data-answer-id="${newAnswerId}">Upvote</button>
                                     <span id="votes_${newAnswerId}">0 Upvotes</span>
-                                </div>
-                            </li>`;
-        document.getElementById('answers-list').innerHTML += newAnswerHtml;
+                                </div>`;
+        const answersList = document.getElementById('answers-list');
+        const newAnswerElement = document.createElement('li');
+        newAnswerElement.id = `answer_${newAnswerId}`;
+        newAnswerElement.innerHTML = escapeHtml(userAnswer) + newAnswerHtml;
+        answersList.appendChild(newAnswerElement);
     }
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+        document.querySelectorAll('.upvote-button').forEach(button => {
+            button.addEventListener('click', (event) => {
+                upvoteAnswer(event.target.dataset.answerId);
+            });
+        });
+
+        document.getElementById('submit-button').addEventListener('click', submitAnswer);
+    });
 </script>
