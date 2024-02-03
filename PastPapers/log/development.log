@@ -171,3 +171,63 @@ Migrating to CreateCourses (20240203163438)
   [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
   [1m[36mCourse Create (0.9ms)[0m  [1m[32mINSERT INTO "courses" ("name", "created_at", "updated_at") VALUES (?, ?, ?) RETURNING "id"[0m  [["name", "Machine Learning"], ["created_at", "2024-02-03 16:35:31.183315"], ["updated_at", "2024-02-03 16:35:31.183315"]]
   [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2024-02-03 17:16:49 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_navbar.html.erb (Duration: 0.5ms | Allocations: 709)
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 1118)
+  Rendered layout layouts/application.html.erb (Duration: 123.8ms | Allocations: 78612)
+Completed 200 OK in 150ms (Views: 133.8ms | ActiveRecord: 0.0ms | Allocations: 88825)
+
+
+Started GET "/login" for 127.0.0.1 at 2024-02-03 17:17:01 +0000
+Processing by SessionsController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered home/_navbar.html.erb (Duration: 0.5ms | Allocations: 177)
+  Rendered sessions/login.html.erb within layouts/application (Duration: 3.3ms | Allocations: 910)
+  Rendered layout layouts/application.html.erb (Duration: 5.8ms | Allocations: 1887)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.0ms | Allocations: 2273)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2024-02-03 17:17:03 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered home/_navbar.html.erb (Duration: 0.4ms | Allocations: 159)
+  Rendered users/new.html.erb within layouts/application (Duration: 6.6ms | Allocations: 2410)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 3392)
+Completed 200 OK in 47ms (Views: 8.6ms | ActiveRecord: 2.6ms | Allocations: 19439)
+
+
+Started GET "/logout" for 127.0.0.1 at 2024-02-03 17:17:06 +0000
+Processing by SessionsController#destroy as HTML
+Redirected to http://127.0.0.1:3000/home
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 373)
+
+
+Started GET "/home" for 127.0.0.1 at 2024-02-03 17:17:06 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/_navbar.html.erb (Duration: 0.3ms | Allocations: 170)
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 234)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 1210)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1600)
+
+
+Started GET "/course?query=&commit=Search" for 127.0.0.1 at 2024-02-03 17:17:07 +0000
+Processing by CoursesController#index as HTML
+  Parameters: {"query"=>"", "commit"=>"Search"}
+  Rendering layout layouts/application.html.erb
+  Rendering courses/index.html.erb within layouts/application
+  Rendered home/_navbar.html.erb (Duration: 0.3ms | Allocations: 179)
+  [1m[36mCourse Load (0.2ms)[0m  [1m[34mSELECT "courses".* FROM "courses"[0m
+  ↳ app/views/courses/index.html.erb:10
+  Rendered courses/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 4049)
+  Rendered layout layouts/application.html.erb (Duration: 8.3ms | Allocations: 5201)
+Completed 200 OK in 27ms (Views: 8.9ms | ActiveRecord: 0.4ms | Allocations: 8437)
+
+
