@@ -1,0 +1,20 @@
+<div class="profile-container">
+    <h1>User Profile</h1>
+    <div class="profile-details">
+        <p class="details-label">Name:</p>
+        <p id="name"><%= @user_name %></p>
+
+        <p class="details-label">University Course:</p>
+        <p id="uni-course"><%= @uni_course %></p>
+
+        <p class="details-label">Classes Taken:</p>
+        <ul id="classes-taken">
+            <% @classes_taken.each do |class_taken| %>
+                <li><%= class_taken %></li>
+            <% end %>
+        </ul>
+
+        <p class="details-label">Number of Upvotes:</p>
+        <p id="upvotes"><%= @upvotes %></p>
+    </div>
+</div>
