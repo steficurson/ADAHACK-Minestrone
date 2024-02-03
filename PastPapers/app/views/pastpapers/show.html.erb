@@ -1,0 +1,65 @@
+<h2>Past Paper Viewer</h2>
+
+<div class="viewer-container">
+    <div class="pdf-container">
+        <h3>Past Paper</h3>
+             <iframe src="<%= @pdf_url %>" width="100%" height="500px"></iframe>
+    </div>
+
+    <div class="answers-container">
+        <h3>User Answers</h3>
+        <ul id="answers-list">
+            <!---->
+            <% @user_answers.each do |answer| %>
+                <li>
+                    <%= answer[:text] %>
+                    <div class="vote-buttons">
+                        <button onclick="upvoteAnswer(<%= answer[:id] %>)">Upvote</button>
+                        <button onclick="downvoteAnswer(<%= answer[:id] %>)">Downvote</button>
+                    </div>
+                </li>
+            <% end %>
+        </ul>
+
+        <div id="submit-answer">
+            <h3>Submit Your Solution</h3>
+            <textarea id="user-answer"></textarea>
+            <button onclick="submitAnswer()">Submit</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function escapeHtml(unsafe) {
+        return unsafe
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+    }
+
+    function upvoteAnswer(answerId) {
+        // Simulate upvote (client-side); in a real application, this should be handled on the server
+        const votesElement = document.getElementById(`votes_${answerId}`);
+        const currentVotes = parseInt(votesElement.innerText.split(' ')[0]);
+        votesElement.innerText = `${currentVotes + 1} Upvotes`;
+
+        // sendUpvoteToServer(answerId); // Commented out until the function is defined
+    }
+
+    function submitAnswer() {
+        // Implement answer submission functionality (you can use AJAX to communicate with the server)
+        const userAnswer = document.getElementById('user-answer').value;
+
+        // Simulate adding a new answer to the list (client-side); in a real application, this should be handled on the server
+        const newAnswerId = Math.floor(Math.random() * 1000); // Replace with a proper ID generation
+        const newAnswerHtml = `<li id="answer_${newAnswerId}">${escapeHtml(userAnswer)}
+                                <div class="vote-buttons">
+                                    <button onclick="upvoteAnswer(${newAnswerId})">Upvote</button>
+                                    <span id="votes_${newAnswerId}">0 Upvotes</span>
+                                </div>
+                            </li>`;
+        document.getElementById('answers-list').innerHTML += newAnswerHtml;
+    }
+</script>

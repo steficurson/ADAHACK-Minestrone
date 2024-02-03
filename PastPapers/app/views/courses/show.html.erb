@@ -1,0 +1,11 @@
+<div class="paper-list">
+    <h2>Past Papers List</h2>
+    <ul>
+        <% @past_papers.each do |paper| %>
+            <li>
+                <a href="<%= paper[:url] %>" class="paper-link" target="_blank"><%= paper[:title] %></a>
+                - <%= paper[:course] %>
+            </li>
+        <% end %>
+    </ul>
+</div>
