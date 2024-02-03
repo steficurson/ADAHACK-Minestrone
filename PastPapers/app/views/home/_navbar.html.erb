@@ -1,4 +1,10 @@
 <nav class="navbar">
+
+    <%= form_tag(course_path, method: :get) do %>
+        <%= text_field_tag :query, params[:query], placeholder: 'Search course...' %>
+        <%= submit_tag 'Search' %>
+    <% end %>
+
     <% if @user.nil? %>
         <div class="navbar-right">
             <%= button_to 'Login', login_path, method: :get, class:'button' %>
@@ -7,7 +13,7 @@
     <% else %>
         <div class="navbar-right">
             <h5>Welcome, <%= @user&.email %></h5>
-            <%= button_to 'Logout', logout_path, method: :delete, class:'button' %>
+            <%= button_to 'Logout', logout_path, method: :get, class:'button' %>
         </div>
     <% end %>
 </nav>
