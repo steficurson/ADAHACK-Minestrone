@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 2024_02_03_122554) do
+ActiveRecord::Schema[7.1].define(version: 2024_02_03_125740) do
   create_table "articles", force: :cascade do |t|
     t.string "title"
     t.text "body"
@@ -25,6 +25,14 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_03_122554) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "past_papers", force: :cascade do |t|
+    t.integer "course_id", null: false
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_past_papers_on_course_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
@@ -32,4 +40,5 @@ ActiveRecord::Schema[7.1].define(version: 2024_02_03_122554) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "past_papers", "courses"
 end

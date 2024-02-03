@@ -847,3 +847,184 @@ NameError (undefined local variable or method `show_user_path' for #<SessionsCon
 Did you mean?  new_user_path):
   
 app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2024-02-03 12:39:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"stefi@example.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stefi@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 272ms (ActiveRecord: 3.9ms | Allocations: 24003)
+
+
+  
+NameError (undefined local variable or method `show_user_path' for #<SessionsController:0x0000000000b220>
+
+      redirect_to show_user_path
+                  ^^^^^^^^^^^^^^
+Did you mean?  new_user_path):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2024-02-03 12:40:05 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"stefi@example.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stefi@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://localhost:3000/login
+Completed 302 Found in 275ms (ActiveRecord: 4.6ms | Allocations: 5563)
+
+
+Started GET "/login" for ::1 at 2024-02-03 12:40:07 +0000
+Processing by SessionsController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 7.7ms | Allocations: 928)
+  Rendered layout layouts/application.html.erb (Duration: 58.9ms | Allocations: 20389)
+Completed 200 OK in 67ms (Views: 65.4ms | ActiveRecord: 0.0ms | Allocations: 21290)
+
+
+Started POST "/login" for ::1 at 2024-02-03 12:40:13 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"stefi@example.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stefi@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 350ms (ActiveRecord: 0.1ms | Allocations: 4221)
+
+
+  
+NameError (undefined local variable or method `sooohow_user_path' for #<SessionsController:0x0000000000f500>
+
+      redirect_to sooohow_user_path
+                  ^^^^^^^^^^^^^^^^^):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started GET "/rails/info/routes" for ::1 at 2024-02-03 12:40:36 +0000
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.1.3/lib/rails/templates/layouts/application.html.erb
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.1.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.1.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [40 times] (Duration: 8.8ms | Allocations: 7269)
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.1.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 4.0ms | Allocations: 997)
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.1.3/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 20.8ms | Allocations: 13072)
+  Rendered layout C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.1.3/lib/rails/templates/layouts/application.html.erb (Duration: 23.7ms | Allocations: 13381)
+Completed 200 OK in 72ms (Views: 55.3ms | ActiveRecord: 0.0ms | Allocations: 14466)
+
+
+Started POST "/login" for ::1 at 2024-02-03 12:41:02 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"stefi@example.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stefi@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Completed 500 Internal Server Error in 435ms (ActiveRecord: 4.7ms | Allocations: 6009)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"users"}, missing required keys: [:id]):
+  
+app/controllers/sessions_controller.rb:9:in `create'
+Started POST "/login" for ::1 at 2024-02-03 12:41:24 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "email"=>"stefi@example.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "stefi@example.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 285ms (ActiveRecord: 5.4ms | Allocations: 5432)
+
+
+Started GET "/users/1" for ::1 at 2024-02-03 12:41:26 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1937)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2024)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 4245)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;             @classes_taken.each do |class_taken| 
+                                    ^^^^^):
+     9: 
+    10:         <p class="details-label">Classes Taken:</p>
+    11:         <ul id="classes-taken">
+    12:             <% @classes_taken.each do |class_taken| %>
+    13:                 <li><%= class_taken %></li>
+    14:             <% end %>
+    15:         </ul>
+  
+app/views/users/show.html.erb:12
+app/controllers/users_controller.rb:21:in `show'
+Started GET "/users/1" for ::1 at 2024-02-03 12:43:37 +0000
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (Duration: 0.9ms | Allocations: 151)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 1781)
+Completed 200 OK in 35ms (Views: 16.9ms | ActiveRecord: 4.9ms | Allocations: 7995)
+
+
+Started GET "/" for ::1 at 2024-02-03 12:44:17 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 276)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 1887)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.0ms | Allocations: 2962)
+
+
+Started GET "/" for ::1 at 2024-02-03 12:46:27 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 75.9ms | Allocations: 3850)
+Completed 200 OK in 79ms (Views: 76.8ms | ActiveRecord: 0.0ms | Allocations: 4119)
+
+
+Started GET "/" for ::1 at 2024-02-03 12:46:52 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 2569)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.0ms | Allocations: 2822)
+
+
+Started GET "/" for ::1 at 2024-02-03 12:46:57 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 2552)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.0ms | Allocations: 2805)
+
+
+Started GET "/" for ::1 at 2024-02-03 12:53:17 +0000
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.2ms | Allocations: 57)
+  Rendered layout layouts/application.html.erb (Duration: 4.0ms | Allocations: 1211)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 1464)
+
+
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePastPapers (20240203125740)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE TABLE "past_papers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "course_id" integer NOT NULL, "year" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_4a7ab27614"
+FOREIGN KEY ("course_id")
+  REFERENCES "courses" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_past_papers_on_course_id" ON "past_papers" ("course_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240203125740') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
