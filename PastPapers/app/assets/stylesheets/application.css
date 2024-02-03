@@ -3,7 +3,7 @@ body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
 }
-h1 {
+.title {
     color: #333;
     font-size: 30px;
     text-align: center;
@@ -23,16 +23,12 @@ h1 {
 .navbar {
     background-color: #c2d4f9;
     height: 50px;
-    font-size: 1.7rem;
     position: sticky;
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
-.navbar button {
+.navbar-right {
     display: flex;
-    justify-content: center;
-    align-items: right;
     float: right;
-    margin: 5px;
 }

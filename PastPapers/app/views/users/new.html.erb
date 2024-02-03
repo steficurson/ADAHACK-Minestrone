@@ -1,8 +1,17 @@
-<h1>Sign Up</h1>
-<%= form_for @user do |f| %>
-  <%= f.label :email %>
-  <%= f.text_field :email %>
-  <%= f.label :password %>
-  <%= f.password_field :password %>
-  <%= f.submit "Create account" %>
-<% end %>
+<head>
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <h1 class="title">University of Edinburgh Past Paper Share</h1>
+    <%= render partial: "navbar"%>
+
+    <h1>Sign Up</h1>
+    <%= form_for @user do |f| %>
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+    <%= f.submit "Create account" %>
+    <% end %>
+</body>
