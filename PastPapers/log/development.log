@@ -551,3 +551,129 @@ Completed 200 OK in 8ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 1628)
   [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/login" for ::1 at 2024-02-03 12:11:21 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#login as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/login.html.erb within layouts/application
+  Rendered sessions/login.html.erb within layouts/application (Duration: 1.6ms | Allocations: 860)
+  Rendered layout layouts/application.html.erb (Duration: 6.7ms | Allocations: 2155)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.0ms | Allocations: 2993)
+
+
+Started GET "/users/new" for ::1 at 2024-02-03 12:16:49 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 6798)
+  Rendered layout layouts/application.html.erb (Duration: 10.4ms | Allocations: 6891)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 4.4ms | Allocations: 11287)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<User id: nil, username: nil, password_digest: nil, created_at: nil, updated_at: nil>):
+    1: <h1>Sign Up</h1>
+    2: <%= form_for @user do |f| %>
+    3:   <%= f.label :email %>
+    4:   <%= f.text_field :email %>
+    5:   <%= f.label :password %>
+    6:   <%= f.password_field :password %>
+    7:   <%= f.submit "Create account" %>
+  
+app/views/users/new.html.erb:4
+app/views/users/new.html.erb:2
+Started GET "/users/new" for ::1 at 2024-02-03 12:19:33 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 6337)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 6424)
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 3.5ms | Allocations: 11302)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<User id: nil, username: nil, password_digest: nil, created_at: nil, updated_at: nil>):
+    1: <h1>Sign Up</h1>
+    2: <%= form_for @user do |f| %>
+    3:   <%= f.label :email %>
+    4:   <%= f.text_field :email %>
+    5:   <%= f.label :password %>
+    6:   <%= f.password_field :password %>
+    7:   <%= f.submit "Create account" %>
+  
+app/views/users/new.html.erb:4
+app/views/users/new.html.erb:2
+Started GET "/" for ::1 at 2024-02-03 12:19:52 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.1ms | Allocations: 425)
+  Rendered layout layouts/application.html.erb (Duration: 68.8ms | Allocations: 21409)
+Completed 200 OK in 104ms (Views: 81.5ms | ActiveRecord: 0.0ms | Allocations: 26153)
+
+
+Started GET "/users/new" for ::1 at 2024-02-03 12:19:54 +0000
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 10.5ms | Allocations: 7469)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 7563)
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 2.7ms | Allocations: 22477)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<User id: nil, username: nil, password_digest: nil, created_at: nil, updated_at: nil>):
+    1: <h1>Sign Up</h1>
+    2: <%= form_for @user do |f| %>
+    3:   <%= f.label :email %>
+    4:   <%= f.text_field :email %>
+    5:   <%= f.label :password %>
+    6:   <%= f.password_field :password %>
+    7:   <%= f.submit "Create account" %>
+  
+app/views/users/new.html.erb:4
+app/views/users/new.html.erb:2
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to RenameUsernameToEmailInUsers (20240203122554)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TEMPORARY TABLE "ausers" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[32mINSERT INTO "ausers" ("id","email","password_digest","created_at","updated_at")
+                     SELECT "id","username","password_digest","created_at","updated_at" FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT NULL, "password_digest" varchar DEFAULT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[32mINSERT INTO "users" ("id","email","password_digest","created_at","updated_at")
+                     SELECT "id","email","password_digest","created_at","updated_at" FROM "ausers"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE "ausers"[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240203122554') RETURNING "version"[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/new" for ::1 at 2024-02-03 12:26:54 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 6338)
+  Rendered layout layouts/application.html.erb (Duration: 7.6ms | Allocations: 6425)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.0ms | Allocations: 10735)
+
+
+  
+ActionView::Template::Error (undefined method `email' for #<User id: nil, username: nil, password_digest: nil, created_at: nil, updated_at: nil>):
+    1: <h1>Sign Up</h1>
+    2: <%= form_for @user do |f| %>
+    3:   <%= f.label :email %>
+    4:   <%= f.text_field :email %>
+    5:   <%= f.label :password %>
+    6:   <%= f.password_field :password %>
+    7:   <%= f.submit "Create account" %>
+  
+app/views/users/new.html.erb:4
+app/views/users/new.html.erb:2
